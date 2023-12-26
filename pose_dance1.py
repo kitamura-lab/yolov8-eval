@@ -8,7 +8,7 @@ ut0 = time.time()
 model = YOLO("yolov8x-pose.pt")
 
 # ビデオファイルを開く
-video_path = "dance.mp4"
+video_path = "sample.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # ビデオフレームをループする
