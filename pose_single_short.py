@@ -1,12 +1,12 @@
 from pose import Pose
-import time
+from clock import Clock
 
 video_path = "single_short.mp4"
 
-start = time.time()
+clock = Clock()
+clock.start()
 
 pose = Pose(video_path)
-pose.run()
+pose.run(True)
 
-end = time.time()
-print("Time: {}".format(end - start))  # 秒単位
+print("Time: {}".format(clock.stop()))  # 秒単位

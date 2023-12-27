@@ -8,7 +8,7 @@ class Pose:
         # YOLOv8モデルをロード
         self.model = YOLO("yolov8x-pose.pt")
 
-    def run(self):
+    def run(self, show):
         # ビデオファイルを開く
         cap = cv2.VideoCapture(self.video_path)
 
@@ -21,11 +21,12 @@ class Pose:
                 # フレームから骨格抽出
                 results = self.model(frame)
 
-                # フレームに結果を可視化
-                annotated_frame = results[0].plot()
+                if show:
+                    # フレームに結果を可視化
+                    annotated_frame = results[0].plot()
 
-                # 注釈付きのフレームを表示
-                cv2.imshow("", annotated_frame)
+                    # 注釈付きのフレームを表示
+                    cv2.imshow("", annotated_frame)
 
                 # ESCが押されたらループから抜ける
                 if cv2.waitKey(1) == 27:
