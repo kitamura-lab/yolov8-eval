@@ -1,18 +1,16 @@
 import cv2
 from ultralytics import YOLO
-import time
 
 
 class Pose:
-    def eval(self):
-        ut0 = time.time()
-
+    def __init__(self, video_path):
+        self.video_path = video_path
         # YOLOv8モデルをロード
-        model = YOLO("yolov8x-pose.pt")
+        self.model = YOLO("yolov8x-pose.pt")
 
+    def run(self):
         # ビデオファイルを開く
-        video_path = "single_short.mp4"
-        cap = cv2.VideoCapture(video_path)
+        cap = cv2.VideoCapture(self.video_path)
 
         # ビデオフレームをループする
         while cap.isOpened():
@@ -20,8 +18,8 @@ class Pose:
             success, frame = cap.read()
 
             if success:
-                # フレームでYOLOv8トラッキングを実行し、フレーム間でトラックを永続化
-                results = model(frame)
+                # フレームから骨格抽出
+                results = self.model(frame)
 
                 # フレームに結果を可視化
                 annotated_frame = results[0].plot()
@@ -29,8 +27,8 @@ class Pose:
                 # 注釈付きのフレームを表示
                 cv2.imshow("", annotated_frame)
 
-                # 'q'が押されたらループから抜ける
-                if cv2.waitKey(1) & 0xFF == ord("q"):
+                # ESCが押されたらループから抜ける
+                if cv2.waitKey(1) == 27:
                     break
             else:
                 # ビデオの終わりに到達したらループから抜ける
@@ -39,6 +37,3 @@ class Pose:
         # ビデオキャプチャオブジェクトを解放し、表示ウィンドウを閉じる
         cap.release()
         cv2.destroyAllWindows()
-
-        ut1 = time.time()
-        print("Time: {}".format(ut1 - ut0))  # 秒単位
