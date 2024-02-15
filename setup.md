@@ -1,5 +1,5 @@
 #   環境設定マニュアル
-Last updated: 2024/02/15 09:35:41
+Last updated: 2024/02/15 09:38:36
 
 * labアカウントの設定
 * Windows Updateの実行
@@ -11,5 +11,5 @@ Last updated: 2024/02/15 09:35:41
   * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA Toolkit 12.2をダウンロードし，インストールする．
 * Minicondaのインストール
    * [ここ](https://docs.anaconda.com/free/miniconda/)からMinicondaをダウンロードし，インストールする．
-* pytorch.batの実行
+* pytorch-gpu.batの実行
   * 最後にTrueが表示されれば環境設定が終了．
