@@ -1,5 +1,5 @@
 #   環境設定マニュアル
-Last updated: 2024/02/19 15:51:33
+Last updated at 2024/11/09 08:28:53
 
 * labアカウントの設定
 * Windows Updateの実行
