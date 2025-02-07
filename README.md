@@ -2,9 +2,9 @@
 
 ## 機能
  
-* YOLOv8を用いて，PCやOSの性能比較を行う．
+* PCやOSごとにYOLOv8の性能比較を行う．
   
-## インストール法
+## インストール法(Windows11)
 * Windows Updateの実行
 * リポジトリをクローンする．
 ```bash
