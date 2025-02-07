@@ -40,7 +40,7 @@ python eval_pose.py
 | Win11 | ALIENWARE | RTX4060 | 93 |
 | Win11 | MSI | RTX3060 |100 |
 | Win11 | Endeavor | RTX3060 | 90 |
-| Win11 | LEVELINF | RTX2070 | 118 |
+| Win11 | LEVELINF | RTX2070 | 115 |
 | Win11 | Katana | RTX4070 | 75 |
 
 
