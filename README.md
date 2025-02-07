@@ -33,7 +33,7 @@ python eval_pose.py
 | ---- | ---- | ---- | ---- |
 | Win11 | SurfaceBook3 | RTX3000 | 224 |
 | Win11 | SurfaceBook3 | CPU | 3131 |
-| Ubuntu | Corei9 | RTX3070 | 64 |
+| Ubuntu | Corei9 | RTX3070 | 60 |
 | Win11 | Corei9 | RTX3070 | 86 |
 | WSL | Corei9  |  RTX3070 | 87 |
 | Win11 | GTUNE | RTX4060 |  84 |
