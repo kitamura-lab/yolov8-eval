@@ -6,12 +6,12 @@
   
 ## インストール法(Windows11)
 * Windows Updateの実行
+* gitのインストール
+  * [ここ](https://git-scm.com/)からダウンロードし，インストールする．
 * リポジトリをクローンする．
 ```bash
 git clone https://github.com/kitamura-lab/yolov8-eval.git
 ```
-* gitのインストール
-  * [ここ](https://git-scm.com/)からダウンロードし，インストールする．
 * NVIDIAドライバのインストール
   * [ここ](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)からGPUに対応する最新のNVIDIAドライバをダウンロードし，インストールする．
 * CUDAのインストール
