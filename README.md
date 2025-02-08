@@ -4,8 +4,8 @@
  
 * PCやOSごとにYOLOv8の性能比較を行う．
   
-## インストール法(Windows11)
-* Windows Updateの実行
+## インストール(Windows11)
+  
 * gitのインストール
   * [ここ](https://git-scm.com/)からダウンロードし，インストールする．
 * リポジトリをクローンする．
@@ -20,7 +20,27 @@ git clone https://github.com/kitamura-lab/yolov8-eval.git
 * pytorch-gpu.batの実行
   * 最後にTrueが表示されれば環境設定が終了．
 
-## 利用法
+## インストール(Ubuntu)
+
+* gitのインストール
+```bash
+sudo apt install git
+```
+
+* リポジトリをクローンする．
+```bash
+git clone https://github.com/kitamura-lab/yolov8-eval.git
+```
+  * アクセスにはユーザ名とPersonal Access Tokenが必要である．
+* NVIDIAドライバのインストール
+  * [参考資料](https://qiita.com/porizou1/items/74d8264d6381ee2941bd)
+* CUDAのインストール
+  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.1をダウンロードし，インストールする．
+* Pythonのインストール
+* pytorch-gpu.batの実行
+  * 最後にTrueが表示されれば環境設定が終了．
+
+## 実行
  
 * プログラムを実行する．
 ```bash
