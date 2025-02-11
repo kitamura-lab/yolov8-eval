@@ -61,6 +61,7 @@ python eval_pose.py
 | Win11 | MSI | RTX3060 |100 |
 | Win11 | Endeavor | RTX3060 | 90 |
 | Win11 | LEVELINF | RTX2070 | 115 |
+| Ubuntu | LEVELINF | RTX2070 | 88 |
 | Win11 | Katana | RTX4070 | 75 |
 
 
