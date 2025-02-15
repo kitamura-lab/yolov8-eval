@@ -120,6 +120,7 @@ python eval_pose.py
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
 | Win11 | LEVELINF | RTX2070 | 125 |
+| Ubuntu | LEVELINF | RTX2070 | 84 |
 
 ## 開発者
  
