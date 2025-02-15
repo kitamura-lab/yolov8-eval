@@ -32,7 +32,7 @@ sudo apt install git
 git clone https://github.com/kitamura-lab/yolov8-eval.git
 ```
 * CUDAのインストール
-  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.1を手順に従い，インストールする．
+  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6を手順に従い，インストールする．
 
 * 古いドライバーを削除する．
 ```bash
@@ -74,11 +74,17 @@ sudo apt-get --purge remove nvidia-*
   ```bash
   sudo apt install python3-pip
   ```
+
+* 仮想環境作成
+  ```bash
+  python3 -m venv ~/venv/yolo11
+  source ~/venc/yolo11/bin/activate
+  ```
+
 * パッケージのインストール
   ```bash
+  pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
   pip install ultralytics
-  pip uninstall torch torchvision
-  pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu121
   ```
 * 確認
   ```bash
