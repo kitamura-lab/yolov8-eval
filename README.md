@@ -1,4 +1,4 @@
-# YOLOv8性能比較
+# YOLO性能比較
 
 ## 機能
  
@@ -15,7 +15,7 @@ git clone https://github.com/kitamura-lab/yolov8-eval.git
 * NVIDIAドライバのインストール
   * [ここ](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)からGPUに対応する最新のNVIDIAドライバをダウンロードし，インストールする．
 * CUDAのインストール
-  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.1をダウンロードし，インストールする．
+  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6をダウンロードし，インストールする．
 * Pythonのインストール
 * pytorch-gpu.batの実行
   * 最後にTrueが表示されれば環境設定が終了．

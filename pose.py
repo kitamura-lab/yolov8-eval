@@ -6,7 +6,7 @@ class Pose:
     def __init__(self, video_path):
         self.video_path = video_path
         # YOLOv8モデルをロード
-        self.model = YOLO("yolov8x-pose.pt")
+        self.model = YOLO("yolo11x-pose.pt")
 
     def run(self, show):
         # ビデオファイルを開く
