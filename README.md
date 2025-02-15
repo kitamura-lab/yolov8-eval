@@ -92,7 +92,7 @@ sudo apt-get --purge remove nvidia-*
 python eval_pose.py
 ```
 
-## 実行結果
+## 実行結果(YOLOv8)
 
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
@@ -109,6 +109,11 @@ python eval_pose.py
 | Ubuntu | LEVELINF | RTX2070 | 86 |
 | Win11 | Katana | RTX4070 | 75 |
 
+## 実行結果(YOLO11+CUDA12.6)
+
+| OS | PC | GPU | Time (sec) |
+| ---- | ---- | ---- | ---- |
+| Win11 | LEVELINF | RTX2070 | 125 |
 
 ## 開発者
  
