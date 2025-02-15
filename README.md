@@ -31,8 +31,35 @@ sudo apt install git
 ```bash
 git clone https://github.com/kitamura-lab/yolov8-eval.git
 ```
-  * アクセスにはユーザ名とPersonal Access Tokenが必要である．
 * NVIDIAドライバのインストール
+  * Nouveauの無効化
+  ```bash
+  sudo gedit /etc/modprobe.d/blacklist-nouveau.conf
+  ```
+  で，以下を保存する．
+  ```txt
+  blacklist nouveau
+  options nouveau modeset=0
+  ```
+  以下を実行する．
+  ```bash
+  sudo update-initramfs -u
+  ```
+  * 推奨ドライバを確認する．recommendedのものを選択する．
+  ```bash
+  ubuntu-drivers devices
+  ```
+  * aptからインストール．XXXは推奨ドライバに置き換える．
+  ```bash
+  sudo add-apt-repository ppa:graphics-drivers/ppa
+  sudo apt update
+  sudo apt install nvidia-driver-XXX
+  ```
+  * 再起動
+  * 確認
+  ```bash
+  nvidia-smi
+  ```
   * [参考資料](https://qiita.com/porizou1/items/74d8264d6381ee2941bd)
 * CUDAのインストール
   * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.1をダウンロードし，インストールする．
