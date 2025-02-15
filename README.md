@@ -77,8 +77,8 @@ sudo apt-get --purge remove nvidia-*
 
 * 仮想環境作成
   ```bash
-  python3 -m venv ~/venv/yolo11
-  source ~/venc/yolo11/bin/activate
+  python3 -m venv ../venv/yolo11
+  source ../venv/yolo11/bin/activate
   ```
 
 * パッケージのインストール
@@ -121,6 +121,7 @@ python eval_pose.py
 | ---- | ---- | ---- | ---- |
 | Win11 | LEVELINF | RTX2070 | 125 |
 | Ubuntu | LEVELINF | RTX2070 | 84 |
+| Win11 | Corei9 | RTX3070 | 87 |
 
 ## 開発者
  
