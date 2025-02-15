@@ -31,6 +31,14 @@ sudo apt install git
 ```bash
 git clone https://github.com/kitamura-lab/yolov8-eval.git
 ```
+* CUDAのインストール
+  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.1を手順に従い，インストールする．
+
+* 古いドライバーを削除する．
+```bash
+sudo apt-get --purge remove nvidia-*
+```
+
 * NVIDIAドライバのインストール
   * Nouveauの無効化
   ```bash
@@ -61,11 +69,21 @@ git clone https://github.com/kitamura-lab/yolov8-eval.git
   nvidia-smi
   ```
   * [参考資料](https://qiita.com/porizou1/items/74d8264d6381ee2941bd)
-* CUDAのインストール
-  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.1をダウンロードし，インストールする．
+
 * Pythonのインストール
-* pytorch-gpu.batの実行
-  * 最後にTrueが表示されれば環境設定が終了．
+  ```bash
+  sudo apt install python3-pip
+  ```
+* パッケージのインストール
+  ```bash
+  pip install ultralytics
+  pip uninstall torch torchvision
+  pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu121
+  ```
+* 確認
+  ```bash
+  python3 check_gpu.py
+  ```
 
 ## 実行
  
