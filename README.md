@@ -127,8 +127,8 @@ python3 eval_pose.py
 | Win11 | Corei9 | RTX3070 | 86 |
 | WSL | Corei9  |  RTX3070 | 87 |
 | Ubuntu | Corei9 | RTX3070 | 60 |
-| Win11 | GTUNE | RTX4060 |  84 |
 | Win11 | ALIENWARE | RTX4060 | 93 |
+| Win11 | GTUNE | RTX4060 |  84 |
 | Win11 | Katana | RTX4070 | 75 |
 
 ## 開発者
