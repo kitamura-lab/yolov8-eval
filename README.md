@@ -103,6 +103,17 @@ sudo apt --purge remove nvidia-*
 python3 eval_pose.py
 ```
 
+## 実行結果(YOLO11+CUDA12.6)
+
+| OS | PC | GPU | Time (sec) |
+| ---- | ---- | ---- | ---- |
+| Win11 | LEVELINF | RTX2070 | 125 |
+| Ubuntu | LEVELINF | RTX2070 | 84 |
+| Win11 | Corei9 | RTX3070 | 87 |
+| Win11 | Katana | RTX4070 | 66 |
+| Win11 | Sword | RTX4070 | 64 |
+| Win11 | DAIV | RTX4090 | 52 |
+
 ## 実行結果(YOLOv8+CUDA12.1)
 
 | OS | PC | GPU | Time (sec) |
@@ -119,17 +130,6 @@ python3 eval_pose.py
 | Win11 | LEVELINF | RTX2070 | 115 |
 | Ubuntu | LEVELINF | RTX2070 | 86 |
 | Win11 | Katana | RTX4070 | 75 |
-
-## 実行結果(YOLO11+CUDA12.6)
-
-| OS | PC | GPU | Time (sec) |
-| ---- | ---- | ---- | ---- |
-| Win11 | LEVELINF | RTX2070 | 125 |
-| Ubuntu | LEVELINF | RTX2070 | 84 |
-| Win11 | Corei9 | RTX3070 | 87 |
-| Win11 | Katana | RTX4070 | 66 |
-| Win11 | Sword | RTX4070 | 64 |
-| Win11 | DAIV | RTX4090 | 52 |
 
 ## 開発者
  
