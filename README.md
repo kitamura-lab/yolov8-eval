@@ -103,7 +103,7 @@ sudo apt --purge remove nvidia-*
 python3 eval_pose.py
 ```
 
-## 実行結果(YOLOv8)
+## 実行結果(YOLOv8+CUDA12.1)
 
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
