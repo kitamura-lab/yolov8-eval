@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="yolo%E6%80%A7%E8%83%BD%E6%AF%94%E8%BC%83">YOLO性能比較</h1>
+<h2 id="%E6%A9%9F%E8%83%BD">機能</h2>
+<ul>
+<li>PCやOSごとにYOLOv8の性能比較を行う．</li>
+</ul>
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%ABwindows11">インストール(Windows11)</h2>
+<ul>
+<li>gitのインストール
+<ul>
+<li><a href="https://git-scm.com/">ここ</a>からダウンロードし，インストールする．</li>
+</ul>
+</li>
+<li>リポジトリをクローンする．</li>
+</ul>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/kitamura-lab/yolov8-eval.git
+</div></code></pre>
+<ul>
+<li>NVIDIAドライバのインストール
+<ul>
+<li><a href="https://www.nvidia.co.jp/Download/index.aspx?lang=jp">ここ</a>からGPUに対応する最新のNVIDIAドライバをダウンロードし，インストールする．</li>
+</ul>
+</li>
+<li>CUDAのインストール
+<ul>
+<li><a href="https://developer.nvidia.com/cuda-toolkit-archive">ここ</a>からCUDA12.6をダウンロードし，インストールする．</li>
+</ul>
+</li>
+<li>Python3.12のインストール</li>
+<li>pytorch-gpu.batの実行
+<ul>
+<li>最後にTrueが表示されれば環境設定が終了．</li>
+</ul>
+</li>
+</ul>
+<h2 id="%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%ABubuntu">インストール(Ubuntu)</h2>
+<ul>
+<li>gitのインストール</li>
+</ul>
+<pre class="hljs"><code><div>sudo apt install git
+</div></code></pre>
+<ul>
+<li>リポジトリをクローンする．</li>
+</ul>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/kitamura-lab/yolov8-eval.git
+</div></code></pre>
+<ul>
+<li>
+<p>CUDAのインストール</p>
+<ul>
+<li><a href="https://developer.nvidia.com/cuda-toolkit-archive">ここ</a>からCUDA12.6を手順に従い，インストールする．</li>
+</ul>
+</li>
+<li>
+<p>古いドライバーを削除する．</p>
+</li>
+</ul>
+<pre class="hljs"><code><div>sudo apt --purge remove nvidia-*
+</div></code></pre>
+<ul>
+<li>
+<p>NVIDIAドライバのインストール</p>
+<ul>
+<li>Nouveauの無効化</li>
+</ul>
+<pre class="hljs"><code><div>sudo gedit /etc/modprobe.d/blacklist-nouveau.conf
+</div></code></pre>
+<p>で，以下を保存する．</p>
+<pre class="hljs"><code><div>blacklist nouveau
+options nouveau modeset=0
+</div></code></pre>
+<p>以下を実行する．</p>
+<pre class="hljs"><code><div>sudo update-initramfs -u
+</div></code></pre>
+<ul>
+<li>推奨ドライバを確認する．recommendedのものを選択する．</li>
+</ul>
+<pre class="hljs"><code><div>ubuntu-drivers devices
+</div></code></pre>
+<ul>
+<li>aptからインストール．XXXは推奨ドライバに置き換える．</li>
+</ul>
+<pre class="hljs"><code><div>sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt update
+sudo apt install nvidia-driver-XXX
+</div></code></pre>
+<ul>
+<li>再起動</li>
+<li>確認</li>
+</ul>
+<pre class="hljs"><code><div>nvidia-smi
+</div></code></pre>
+<ul>
+<li><a href="https://qiita.com/porizou1/items/74d8264d6381ee2941bd">参考資料</a></li>
+</ul>
+</li>
+<li>
+<p>Pythonのインストール</p>
+<pre class="hljs"><code><div>sudo apt install python3-pip
+</div></code></pre>
+</li>
+<li>
+<p>仮想環境作成</p>
+<pre class="hljs"><code><div>python3 -m venv ../venv/yolo11
+<span class="hljs-built_in">source</span> ../venv/yolo11/bin/activate
+</div></code></pre>
+</li>
+<li>
+<p>パッケージのインストール</p>
+<pre class="hljs"><code><div>pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+pip3 install ultralytics
+</div></code></pre>
+</li>
+<li>
+<p>確認</p>
+<pre class="hljs"><code><div>python3 check_gpu.py
+</div></code></pre>
+</li>
+</ul>
+<h2 id="%E5%AE%9F%E8%A1%8C">実行</h2>
+<ul>
+<li>プログラムを実行する．</li>
+</ul>
+<pre class="hljs"><code><div>python3 eval_pose.py
+</div></code></pre>
+<h2 id="%E5%AE%9F%E8%A1%8C%E7%B5%90%E6%9E%9Cyolov8">実行結果(YOLOv8)</h2>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>PC</th>
+<th>GPU</th>
+<th>Time (sec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Win11</td>
+<td>SurfaceBook3</td>
+<td>RTX3000</td>
+<td>224</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>SurfaceBook3</td>
+<td>CPU</td>
+<td>3131</td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td>Corei9</td>
+<td>RTX3070</td>
+<td>60</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>Corei9</td>
+<td>RTX3070</td>
+<td>86</td>
+</tr>
+<tr>
+<td>WSL</td>
+<td>Corei9</td>
+<td>RTX3070</td>
+<td>87</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>GTUNE</td>
+<td>RTX4060</td>
+<td>84</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>ALIENWARE</td>
+<td>RTX4060</td>
+<td>93</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>MSI</td>
+<td>RTX3060</td>
+<td>100</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>Endeavor</td>
+<td>RTX3060</td>
+<td>90</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>LEVELINF</td>
+<td>RTX2070</td>
+<td>115</td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td>LEVELINF</td>
+<td>RTX2070</td>
+<td>86</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>Katana</td>
+<td>RTX4070</td>
+<td>75</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E5%AE%9F%E8%A1%8C%E7%B5%90%E6%9E%9Cyolo11cuda126">実行結果(YOLO11+CUDA12.6)</h2>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>PC</th>
+<th>GPU</th>
+<th>Time (sec)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Win11</td>
+<td>LEVELINF</td>
+<td>RTX2070</td>
+<td>125</td>
+</tr>
+<tr>
+<td>Ubuntu</td>
+<td>LEVELINF</td>
+<td>RTX2070</td>
+<td>84</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>Corei9</td>
+<td>RTX3070</td>
+<td>87</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>Katana</td>
+<td>RTX4070</td>
+<td>66</td>
+</tr>
+<tr>
+<td>Win11</td>
+<td>DAIV</td>
+<td>RTX4090</td>
+<td>52</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E9%96%8B%E7%99%BA%E8%80%85">開発者</h2>
+<ul>
+<li>作成者：北村泰彦</li>
+<li>所属：関西学院大学工学部情報工学課程</li>
+<li>E-mail：ykitamura@kwansei.ac.jp</li>
+</ul>
+
+</body>
+</html>
