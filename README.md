@@ -36,7 +36,7 @@ git clone https://github.com/kitamura-lab/yolov8-eval.git
 
 * 古いドライバーを削除する．
 ```bash
-sudo apt-get --purge remove nvidia-*
+sudo apt --purge remove nvidia-*
 ```
 
 * NVIDIAドライバのインストール
@@ -84,7 +84,7 @@ sudo apt-get --purge remove nvidia-*
 * パッケージのインストール
   ```bash
   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
-  pip install ultralytics
+  pip3 install ultralytics
   ```
 * 確認
   ```bash
@@ -95,7 +95,7 @@ sudo apt-get --purge remove nvidia-*
  
 * プログラムを実行する．
 ```bash
-python eval_pose.py
+python3 eval_pose.py
 ```
 
 ## 実行結果(YOLOv8)
