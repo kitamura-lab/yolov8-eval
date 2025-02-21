@@ -62,7 +62,7 @@ sudo apt --purge remove nvidia-*
   ```bash
   ubuntu-drivers devices
   ```
-  * aptからインストール．XXXは推奨ドライバに置き換える．
+  * aptでインストール．XXXは推奨ドライバに置き換える．
   ```bash
   sudo add-apt-repository ppa:graphics-drivers/ppa
   sudo apt update
@@ -75,7 +75,7 @@ sudo apt --purge remove nvidia-*
   ```
   * [参考資料](https://qiita.com/porizou1/items/74d8264d6381ee2941bd)
 
-* Pythonのインストール
+* Pythonとpipのインストール
   ```bash
   sudo apt install python3-pip
   ```
