@@ -109,6 +109,7 @@ python3 eval_pose.py
 | ---- | ---- | ---- | ---- |
 | Win11 | LEVELINF | RTX2070 | 125 |
 | Ubuntu | LEVELINF | RTX2070 | 84 |
+| Win11 | GTUNE | RTX3070 |  89 |
 | Win11 | Corei9 | RTX3070 | 87 |
 | Win11 | GTUNE | RTX4060 |  74 |
 | Win11 | Katana | RTX4070 | 59 |
