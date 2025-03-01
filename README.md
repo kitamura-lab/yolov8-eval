@@ -25,7 +25,7 @@ git clone https://github.com/kitamura-lab/yolov8-eval.git
 * pytorch-gpu.batの実行
   * 最後にTrueが表示されれば環境設定が終了．
 
-## インストール(Ubuntu)
+## インストール(Ubuntu 22.04)
 
 * gitのインストール
 ```bash
@@ -78,6 +78,7 @@ sudo apt --purge remove nvidia-*
 * Pythonとpipのインストール
   ```bash
   sudo apt install python3-pip
+  sudo apt install python3-venv
   ```
 
 * 仮想環境作成
@@ -112,6 +113,7 @@ python3 eval_pose.py
 | Win11 | GTUNE | RTX3070 |  89 |
 | Win11 | Corei9 | RTX3070 | 87 |
 | Win11 | ALIENWARE | RTX4060 | 87 |
+| Ubuntu | ALIENWARE | RTX4060 | 71 |
 | Win11 | GTUNE | RTX4060 |  74 |
 | Win11 | Katana | RTX4070 | 59 |
 | Win11 | Sword | RTX4070 | 64 |
