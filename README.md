@@ -42,21 +42,21 @@ YOLOのインストールと性能比較を行うための資料
 ## インストール(Ubuntu 22.04)
 
 * gitのインストール
-```bash
-sudo apt install git
-```
+  ```bash
+  sudo apt install git
+  ```
 
 * リポジトリをクローンする．
-```bash
-git clone https://github.com/kitamura-lab/yolov8-eval.git
-```
+  ```bash
+  git clone https://github.com/kitamura-lab/yolov8-eval.git
+  ```
 * CUDAのインストール
   * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6を手順に従い，インストールする．
 
 * 古いドライバーを削除する．
-```bash
-sudo apt --purge remove nvidia-*
-```
+  ```bash
+  sudo apt --purge remove nvidia-*
+  ```
 
 * NVIDIAドライバのインストール
   * Nouveauの無効化
@@ -89,27 +89,33 @@ sudo apt --purge remove nvidia-*
   ```
   * [参考資料](https://qiita.com/porizou1/items/74d8264d6381ee2941bd)
 
-* Pythonとpipのインストール
+* Minicondaのインストール
+  * [ここ](https://www.anaconda.com/download/success)からダウンロードし，以下を実行する．
   ```bash
-  sudo apt install python3-pip
-  sudo apt install python3-venv
+  bash Miniconda3-latest-Linux-x86_64.sh
   ```
-
-* 仮想環境作成
+  * 以下を~/.bashrcに追加する．「ユーザ名」は正しいものに置換する．
   ```bash
-  python3 -m venv ../venv/yolo11
-  source ../venv/yolo11/bin/activate
+  eval "$(/home/ユーザ名/miniconda3/bin/conda shell.bash hook)" 
+  ```
+* 仮想環境の作成
+  ```bash
+  conda create -n yolo python=3.12
+  conda activate yolo
   ```
 
 * パッケージのインストール
   ```bash
-  pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
-  pip3 install ultralytics
+  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+  pip install ultralytics
   ```
+
 * 確認
   ```bash
-  python3 check_gpu.py
+  python check_gpu.py
   ```
+  * Trueが表示されればインストールが成功．
+
 
 ## 性能比較
  
