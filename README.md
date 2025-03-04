@@ -14,9 +14,9 @@ YOLOのインストールと性能比較を行うための資料
 * gitのインストール
   * [ここ](https://git-scm.com/)からダウンロードし，インストールする．
 * リポジトリをクローンする．
-```bash
-git clone https://github.com/kitamura-lab/yolov8-eval.git
-```
+  ```bash
+  git clone https://github.com/kitamura-lab/yolov8-eval.git
+  ```
 * NVIDIAドライバのインストール
   * [ここ](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)からGPUに対応する最新のNVIDIAドライバをダウンロードし，インストールする．
 * CUDAのインストール
