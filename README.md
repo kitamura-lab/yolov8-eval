@@ -21,7 +21,8 @@ YOLOのインストールと性能比較を行うための資料
   * [ここ](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)からGPUに対応する最新のNVIDIAドライバをダウンロードし，インストールする．
 * CUDAのインストール
   * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6をダウンロードし，インストールする．
-* [Miniconda](https://www.anaconda.com/download/success)のインストール
+* Minicondaのインストール
+  * [ここ](https://www.anaconda.com/download/success)からダウンロードし，インストールする．
 * 仮想環境の作成
   ```bash
   conda create -n yolo python=3.12
