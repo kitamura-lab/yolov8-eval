@@ -1,8 +1,8 @@
-# YOLO性能比較
+# YOLOインストールと性能比較
 
 ## 機能
  
-* PCやOSごとにYOLOの性能比較を行う．
+YOLOのインストールと性能比較を行うための資料
 
 ## 前提
 
@@ -21,8 +21,21 @@ git clone https://github.com/kitamura-lab/yolov8-eval.git
   * [ここ](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)からGPUに対応する最新のNVIDIAドライバをダウンロードし，インストールする．
 * CUDAのインストール
   * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6をダウンロードし，インストールする．
-* Python3.12のインストール
-* pytorch-gpu.batの実行
+* [Miniconda](https://www.anaconda.com/download/success)のインストール
+* 仮想環境の作成
+  ```bash
+  conda create -n yolo python=3.12
+  conda activate yolo
+  ```
+* パッケージのインストール
+  ```bash
+  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+  pip install ultralytics
+  ```
+* 確認
+  ```bash
+  python check_gpu.py
+  ```
   * 最後にTrueが表示されれば環境設定が終了．
 
 ## インストール(Ubuntu 22.04)
@@ -97,14 +110,14 @@ sudo apt --purge remove nvidia-*
   python3 check_gpu.py
   ```
 
-## 実行
+## 性能比較
  
-* プログラムを実行する．
+プログラムを実行する．
 ```bash
-python3 eval_pose.py
+python eval_pose.py
 ```
 
-## 実行結果(YOLO11+CUDA12.6)
+### 実行結果(YOLO11+CUDA12.6)
 
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
@@ -120,7 +133,7 @@ python3 eval_pose.py
 | Win11 | Sword | RTX4070 | 64 |
 | Win11 | DAIV | RTX4090 | 52 |
 
-## 実行結果(YOLOv8+CUDA12.1)
+### 実行結果(YOLOv8+CUDA12.1)
 
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
