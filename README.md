@@ -12,6 +12,7 @@ YOLOのインストールと性能比較を行うための資料
 ## インストール(Windows11)
   
 * gitのインストール
+  * `git -v`で確認する．インストールされていなければ以下を実行する．
   * [ここ](https://git-scm.com/)からダウンロードし，インストールする．
 * リポジトリをクローンする．
   ```bash
@@ -20,9 +21,12 @@ YOLOのインストールと性能比較を行うための資料
 * NVIDIAドライバのインストール
   * [ここ](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)からGPUに対応する最新のNVIDIAドライバをダウンロードし，インストールする．
 * CUDAのインストール
+  * `nvcc -V`で確認する．インストールされていなければ，以下を実行する．
   * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6をダウンロードし，インストールする．
 * Minicondaのインストール
+  * `conda -V`で確認する．インストールされていなければ，以下を実行する．
   * [ここ](https://www.anaconda.com/download/success)からダウンロードし，インストールする．
+  * Anaconda Promptで`conda init powershell`を実行する．
 * 仮想環境の作成
   ```bash
   conda create -n yolo python=3.12
