@@ -101,6 +101,7 @@ YOLOのインストールと性能比較を行うための資料
   * [参考資料](https://qiita.com/porizou1/items/74d8264d6381ee2941bd)
 
 * Minicondaのインストール
+  * `conda -V`で確認する．インストールされていなければ，以下を実行する．
   * [ここ](https://www.anaconda.com/download/success)からダウンロードし，以下を実行する．
   ```bash
   bash Miniconda3-latest-Linux-x86_64.sh
