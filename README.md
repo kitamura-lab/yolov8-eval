@@ -36,7 +36,7 @@ git clone https://github.com/kitamura-lab/yolov8-eval.git
   ```bash
   python check_gpu.py
   ```
-  * 最後にTrueが表示されれば環境設定が終了．
+  * Trueが表示されればインストールが成功．
 
 ## インストール(Ubuntu 22.04)
 
