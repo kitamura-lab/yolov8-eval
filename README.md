@@ -56,7 +56,13 @@ YOLOのインストールと性能比較を行うための資料
   git clone https://github.com/kitamura-lab/yolov8-eval.git
   ```
 * CUDAのインストール
+  * `nvcc -V`で確認する．インストールされていなければ，以下を実行する．
   * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6を手順に従い，インストールする．
+  * 以下を~/.bashrcに追加する．
+  ```bash
+  export PATH=/usr/local/cuda/bin:$PATH
+  export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+  ```
 
 * 古いドライバーを削除する．
   ```bash
