@@ -46,6 +46,7 @@ YOLOのインストールと性能比較を行うための資料
 ## インストール(Ubuntu 22.04)
 
 * gitのインストール
+  * `git --version`で確認する．インストールされていなければ以下を実行する．
   ```bash
   sudo apt install git
   ```
