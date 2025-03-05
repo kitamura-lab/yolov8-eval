@@ -106,7 +106,7 @@ YOLOのインストールと性能比較を行うための資料
   ```bash
   bash Miniconda3-latest-Linux-x86_64.sh
   ```
- * 最後の質問にはyesとする．
+   * 最後の質問にはyesとする．
 
 * 仮想環境の作成
   ```bash
