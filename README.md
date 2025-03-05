@@ -106,11 +106,7 @@ YOLOのインストールと性能比較を行うための資料
   ```bash
   bash Miniconda3-latest-Linux-x86_64.sh
   ```
-  * 以下を実行する．「ユーザ名」は正しいものに置換する．
-  ```bash
-  eval "$(/home/ユーザ名/miniconda3/bin/conda shell.bash hook)" 
-  conda init
-  ```
+ * 最後の質問にはyesとする．
 
 * 仮想環境の作成
   ```bash
