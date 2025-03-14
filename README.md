@@ -141,6 +141,7 @@ python eval_pose.py
 | Win11 | MSI | RTX3060 |98 |
 | Ubuntu | MSI | RTX3060 |72 |
 | Win11 | Katana | RTX3060 | 85 |
+| Win11 | Endeavor | RTX3060 | 94 |
 | Win11 | GTUNE | RTX3070 |  89 |
 | Win11 | Corei9 | RTX3070 | 87 |
 | Ubuntu | Corei9 | RTX3070 | 56 |
