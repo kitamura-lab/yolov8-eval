@@ -18,8 +18,6 @@ YOLOのインストールと性能比較を行うための資料
   ```bash
   git clone https://github.com/kitamura-lab/yolov8-eval.git
   ```
-* NVIDIAドライバのインストール
-  * [ここ](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)からGPUに対応する最新のNVIDIAドライバをダウンロードし，インストールする．
 * CUDAのインストール
   * `nvcc -V`で確認する．インストールされていなければ，以下を実行する．
   * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6をダウンロードし，インストールする．
