@@ -144,6 +144,7 @@ python eval_pose.py
 | Win11 | Endeavor | RTX3060 | 94 |
 | Ubuntu | Endeavor | RTX3060 | 65 |
 | Win11 | GTUNE | RTX3070 |  89 |
+| Ubuntu | GTUNE | RTX3070 |  53 |
 | Win11 | Corei9 | RTX3070 | 87 |
 | Ubuntu | Corei9 | RTX3070 | 56 |
 | Win11 | ALIENWARE | RTX4060 | 87 |
