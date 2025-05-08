@@ -18,7 +18,7 @@ YOLOのインストールと性能比較を行うための資料
   ```bash
   git clone https://github.com/kitamura-lab/yolov8-eval.git
   ```
-* CUDAのインストール
+* （GPU搭載PCの場合）CUDAのインストール
   * `nvcc -V`で確認する．インストールされていなければ，以下を実行する．
   * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6をダウンロードし，インストールする．
 * Minicondaのインストール
@@ -30,12 +30,15 @@ YOLOのインストールと性能比較を行うための資料
   conda create -n yolo python=3.12
   conda activate yolo
   ```
-* パッケージのインストール
+* （GPU搭載PCの場合）CUDA対応torchのインストール
   ```bash
   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+  ```
+* YOLOのインストール
+  ```bash
   pip install ultralytics
   ```
-* 確認
+* （GPU搭載PCの場合）確認
   ```bash
   python check_gpu.py
   ```
