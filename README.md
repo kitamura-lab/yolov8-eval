@@ -38,11 +38,11 @@ YOLOのインストールと性能比較を行うための資料
   ```bash
   pip install ultralytics
   ```
-* （GPU搭載PCの場合）確認
+* 確認
   ```bash
   python check_gpu.py
   ```
-  * Trueが表示されればインストールが成功．
+  * GPU搭載PCの場合True，非搭載PCの場合Falseが表示されればインストールが成功．
 
 ## インストール(Ubuntu 22.04)
 
