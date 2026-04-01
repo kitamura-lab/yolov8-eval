@@ -20,7 +20,7 @@ YOLOのインストールと性能比較を行うための資料
   ```
 * （GPU搭載PCの場合）CUDAのインストール
   * `nvcc -V`で確認する．インストールされていなければ，以下を実行する．
-  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6をダウンロードし，インストールする．
+  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6をダウンロードし，インストールする．GPUがRTX5000シリーズの場合はCUDA13.0をインストールする．
 * Minicondaのインストール
   * `conda -V`で確認する．インストールされていなければ，以下を実行する．
   * [ここ](https://www.anaconda.com/download/success)からダウンロードし，インストールする．
@@ -33,6 +33,10 @@ YOLOのインストールと性能比較を行うための資料
 * （GPU搭載PCの場合）CUDA対応torchのインストール
   ```bash
   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+  ```
+  GPUがRTX5000シリーズの場合
+  ```bash
+  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
   ```
 * YOLOのインストール
   ```bash
