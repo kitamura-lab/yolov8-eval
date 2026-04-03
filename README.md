@@ -152,6 +152,18 @@ python draw_pose.py 動画ファイル名
 python eval_pose.py
 ```
 
+### 実行結果(YOLO11+CUDA13.0)
+
+| OS | PC | GPU | Time (sec) |
+| ---- | ---- | ---- | ---- |
+| Win11 | AORUS | RTX5080 | 84 |
+
+### 実行結果(YOLO11+CUDA12.8)
+
+| OS | PC | GPU | Time (sec) |
+| ---- | ---- | ---- | ---- |
+| Win11 | AORUS | RTX5080 | 84 |
+
 ### 実行結果(YOLO11+CUDA12.6)
 
 | OS | PC | GPU | Time (sec) |
