@@ -156,13 +156,13 @@ python eval_pose.py
 
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
-| Win11 | AORUS | RTX5080 | 84 |
+| Win11 | AORUS | RTX5080 | 68 |
 
-### 実行結果(YOLO11+CUDA12.8)
+<!-- ### 実行結果(YOLO11+CUDA12.8)
 
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
-| Win11 | AORUS | RTX5080 | 84 |
+| Win11 | AORUS | RTX5080 | 84 | -->
 
 ### 実行結果(YOLO11+CUDA12.6)
 
