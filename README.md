@@ -156,6 +156,7 @@ python eval_pose.py
 
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
+| Win11 | GiMATE | RTX5070 | 82 |
 | Win11 | AORUS | RTX5080 | 68 |
 
 <!-- ### 実行結果(YOLO11+CUDA12.8)
