@@ -155,6 +155,7 @@ python eval_pose.py
 | Win11 | Corei9 | RTX3070 | 122 |
 | Win11 | GiMATE | RTX5070 | 82 |
 | Win11 | AORUS | RTX5080 | 68 |
+| Win11 | DAIV | RTX4090 | 57 |
 
 <!-- ### 実行結果(YOLO11+CUDA12.8)
 
