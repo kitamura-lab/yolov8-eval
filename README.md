@@ -152,6 +152,7 @@ python eval_pose.py
 
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
+| Win11 | Corei9 | RTX3070 | 122 |
 | Win11 | GiMATE | RTX5070 | 82 |
 | Win11 | AORUS | RTX5080 | 68 |
 

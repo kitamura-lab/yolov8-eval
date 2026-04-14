@@ -1,5 +1,5 @@
-from pose import Pose
 from clock import Clock
+from pose import Pose
 
 # video_path = "single_short.mp4"
 video_path = "single_long.mp4"
