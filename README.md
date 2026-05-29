@@ -43,7 +43,7 @@ YOLOのインストールと性能比較を行うための資料
   ```
   * GPU搭載PCの場合True，非搭載PCの場合Falseが表示されればインストールが成功．
 
-## インストール(Ubuntu 22.04)
+## インストール(Ubuntu 24.04)
 
 * gitのインストール
   * `git --version`で確認する．インストールされていなければ以下を実行する．
@@ -57,7 +57,7 @@ YOLOのインストールと性能比較を行うための資料
   ```
 * CUDAのインストール
   * `nvcc -V`で確認する．インストールされていなければ，以下を実行する．
-  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA12.6を手順に従い，インストールする．
+  * [ここ](https://developer.nvidia.com/cuda-toolkit-archive)からCUDA13.0を手順に従い，インストールする．
   * 以下を~/.bashrcに追加する．
   ```bash
   export PATH=/usr/local/cuda/bin:$PATH
@@ -116,7 +116,7 @@ YOLOのインストールと性能比較を行うための資料
 
 * パッケージのインストール
   ```bash
-  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu126
+  pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu130
   pip install ultralytics
   ```
 
