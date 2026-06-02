@@ -70,7 +70,7 @@ YOLOのインストールと性能比較を行うための資料
   ```
 
 * NVIDIAドライバのインストール
-  * Nouveauの無効化
+  <!-- * Nouveauの無効化
   ```bash
   sudo gedit /etc/modprobe.d/blacklist-nouveau.conf
   ```
@@ -82,7 +82,7 @@ YOLOのインストールと性能比較を行うための資料
   以下を実行する．
   ```bash
   sudo update-initramfs -u
-  ```
+  ``` -->
   * 推奨ドライバを確認する．recommendedのものを選択する．
   ```bash
   ubuntu-drivers devices
@@ -93,7 +93,9 @@ YOLOのインストールと性能比較を行うための資料
   sudo apt update
   sudo apt install nvidia-driver-XXX
   ```
+  * セキュアブートが有効な場合は使い捨てPWを登録する．
   * 再起動
+  * Enroll MOKより使い捨てPWを入力する．
   * 確認
   ```bash
   nvidia-smi
@@ -158,6 +160,7 @@ python eval_pose.py
 | Win11 | AORUS | RTX5080 | 68 |
 | Win11 | DAIV | RTX4090 | 57 |
 | Ubuntu | AORUS | RTX5080 | 33 |
+| Ubuntu | DAIV | RTX4090 | 75 |
 
 <!-- ### 実行結果(YOLO11+CUDA12.8)
 
