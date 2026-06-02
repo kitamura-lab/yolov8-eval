@@ -189,6 +189,7 @@ python eval_pose.py
 | Win11 | Katana | RTX4070 | 59 |
 | Win11 | Sword | RTX4070 | 64 |
 | Win11 | DAIV | RTX4090 | 52 |
+| Ubuntu | DAIV | RTX4090 | 60 |
 
 ### 実行結果(YOLOv8+CUDA12.1)
 
