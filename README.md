@@ -155,12 +155,14 @@ python eval_pose.py
 | OS | PC | GPU | Time (sec) |
 | ---- | ---- | ---- | ---- |
 | Win11 | Corei9 | RTX3070 | 122 |
+| Win11 | ALIENWARE | RTX4060 | 91 |
 | Ubuntu | Sword | RTX4070 | 60 |
 | Win11 | GiMATE | RTX5070 | 82 |
 | Win11 | AORUS | RTX5080 | 68 |
 | Win11 | DAIV | RTX4090 | 57 |
-| Ubuntu | AORUS | RTX5080 | 33 |
 | Ubuntu | DAIV | RTX4090 | 75 |
+| Ubuntu | AORUS | RTX5080 | 33 |
+
 
 <!-- ### 実行結果(YOLO11+CUDA12.8)
 
